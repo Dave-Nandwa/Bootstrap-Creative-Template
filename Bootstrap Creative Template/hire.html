@@ -12,16 +12,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <link rel="shortcut icon" href="Web..png">
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+   <!-- loader starts -->
+<div class="loader"></div>
+<style>
+  .loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('http://uploads.webflow.com/56dfccba3d760e08049f42a9/56dfccba3d760e08049f4300_infinite-gif-preloader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+	$(".loader").fadeOut("slow");
+})
+</script>
+
+
+
+
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-   <a href="#myPage" onclick="closeNav()">HOME</a>
-    <a href="#services" onclick="closeNav()">Services</a>
-    <a href="#pricing" onclick="closeNav()">Pricing</a>
-    <a href="#contact" onclick="closeNav()">CONTACT</a>
+   <a href="index.html#myPage" onclick="closeNav()">HOME</a>
+    <a href="index.html#services" onclick="closeNav()">Services</a>
+    <a href="index.html#pricing" onclick="closeNav()">Pricing</a>
+    <a href="indexhtml#contact" onclick="closeNav()">CONTACT</a>
     <a href="hire.html" onclick="closeNav()">Hire Us</a>
 </div>
     
@@ -33,7 +56,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage"><img src="Web..png" height="50"/></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">

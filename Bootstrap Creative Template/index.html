@@ -6,17 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-   <link href="css/main.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <link rel="shortcut icon" href="Web..png">
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+  
+  <!-- loader starts -->
+<div class="loader"></div>
+<style>
+  .loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('http://uploads.webflow.com/56dfccba3d760e08049f42a9/56dfccba3d760e08049f4300_infinite-gif-preloader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+});
+</script>
 
+<script type="text/javascript">
+$(document).on('click', 'a', function(event){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 1000);
+});
+</script>
+
+<!-- loader ends -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
    <a href="#myPage" onclick="closeNav()">HOME</a>
@@ -34,14 +65,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage"><img src="Web..png" height="50"/></a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li ><a href="#myPage">HOME</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#map">Find Us</a></li>
          <li><a href="hire.html">Hire Us</a></li>
         <!--<li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
@@ -86,7 +118,7 @@
       <div class="item">
         <img src="comp.jpg" alt="Los Angeles" width="1200" >
         <div class="carousel-caption">
-          <h3>SEO OPTIMIZATION</h3>
+          <h3>SEO <span class="extra">OPTIMIZATION</span></h3>
           <p>We navigate through internet traffic to put your site at the top.</p>
         </div>      
       </div>
@@ -143,7 +175,7 @@
     <div class="col-sm-4 so">
       <i class="fa fa-desktop" aria-hidden="true"></i>
       <h4 style="color:#303030;">SEO Optimization</h4>
-      <p>Getting your website on the map can be hard, but here at {COMPANY NAME} we make sure that every click counts..</p>
+      <p>Getting your website on the map can be hard, but here at <i><b style="color:#230f86!important;">Fluid</b></i> we make sure that every click counts..</p>
     </div>
   </div>
 </div>
@@ -161,7 +193,7 @@
   <div class="row">
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
-        <div class="panel-heading">
+        <div class="panel-heading norm">
           <h1>Basic</h1>
         </div>
         <div class="panel-body">
@@ -171,17 +203,16 @@
           <p><strong>2</strong> Sit</p>
           <p><strong>Endless</strong> Amet</p>
         </div>
-        <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
+        <div class="panel-footer norm">
+          <h4>$100</h4>
           <button class="btn btn-lg">Choose</button>
         </div>
       </div>      
     </div>     
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Pro</h1>
+        <div class="panel-heading highlight upabit">
+          <h1>Standard</h1>
         </div>
         <div class="panel-body">
           <p><strong>50</strong> Lorem</p>
@@ -190,17 +221,16 @@
           <p><strong>5</strong> Sit</p>
           <p><strong>Endless</strong> Amet</p>
         </div>
-        <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
+        <div class="panel-footer highlight">
+          <h4>$150</h4>
           <button class="btn btn-lg">Choose</button>
         </div>
       </div>      
     </div>       
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Premium</h1>
+        <div class="panel-heading norm">
+          <h1>Pro</h1>
         </div>
         <div class="panel-body">
           <p><strong>100</strong> Lorem</p>
@@ -209,9 +239,8 @@
           <p><strong>10</strong> Sit</p>
           <p><strong>Endless</strong> Amet</p>
         </div>
-        <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
+        <div class="panel-footer norm">
+          <h4>$250</h4>
           <button class="btn btn-lg">Choose</button>
         </div>
       </div>      
@@ -259,61 +288,29 @@
 </div>
 
 <!-- Add Google Maps -->
-<div id="googleMap"></div>
+<div id="googleMap" class="container-fluid"></div>
 <script>
 function myMap() {
 var myCenter = new google.maps.LatLng(-1.2920659, 36.82194619999996);
-var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var mapProp = {center:myCenter, zoom:6, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 var marker = new google.maps.Marker({position:myCenter});
 marker.setMap(map);
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyYd8UxZ4ni_995CyOn7OMGrs2j-HM-kI&callback=myMap"></script>
 
+    
+    
 <!-- Footer -->
-<footer class="text-center">
+<footer class="text-center" id="map">
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
-  <p>Website developed By <a href="#" data-toggle="tooltip" title="Full Stack Web Developer">David Nandwa</a></p> 
+ <p class="w3-tooltip">Website developed by: <a href="#">David Nandwa</a>.<span style="position:absolute;left:50%;bottom:25px;background-color: #22313F;" class="w3-text w3-tag">Full Stack Web Developer</span></p>
 </footer>
 
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-})
-</script>
-    
     <!-- Sidenav styles and scripts -->
     
     <style>
@@ -373,6 +370,35 @@ function closeNav() {
      
     
     <!-- Sidenav styles and scripts ends -->
+<!--  smooth scroll scripts -->
+<script type="text/javascript">
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
 
 </body>
 </html>
